@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <style>
+                body {
+                    height: 88vh;
+                    display: grid;
+                    align-content: center;
+                    justify-content: center;   
+                }
+
+                body div:nth-child(1):not(div div div):not(div div){
+                    background-color: #607d8b;
+                    width: 60px;
+                    height: 60px;
+                    border-top-left-radius: 10px;
+                    position: relative;
+                }
+
+                .first  {
+                    background-color: #607d8b;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 10px;
+                    position: fixed;
+                }
+
+                div:nth-child(2){
+                    position: fixed;
+                }
+
+                div:nth-child(2)::after {
+                    content: "";
+                    width: 5px;
+                    height: 55px;
+                    background-color: #607d8b;
+                    position: absolute;
+                    right: -68.6px;
+                    top: 5px;
+                    rotate: -20deg;
+                }
+
+                .first::after {
+                    content: "";
+                    width: 5px;
+                    height: 55px;
+                    background-color: #607d8b;
+                    position: absolute;
+                    right: 63.6px;
+                    top: 5px;
+                    rotate: 20deg;
+                }
+
+                   .second {
+                    background-color: #cccccc;
+                    width: 250px;
+                    height: 50px;
+                    top: 20px;
+                    z-index: 2;
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    translate: -50% -50%;
+                }
+
+                .second-2 {
+                    background-color: #cccccc;
+                    width: 250px;
+                    height: 50px;
+                    top: 20px;
+                    z-index: 2;
+                    position: absolute;
+                    top: 130%;
+                    left: 50%;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    translate: -50% -50%;
+                }
+
+                .third {
+                    width: 40px;
+                    height: 10px;
+                    background-color: #cccccc;
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    border-radius: 3px;
+                    translate: -50% -50%;
+                }
+
+                .fifth {
+                    background-color:#607d8b;
+                    width: 20px;
+                    height: 5px;
+                    position: absolute;
+                    left: 50%;
+                    top: 2.5px;
+                    border-radius: 1px;
+                    translate: -50% 0;
+                }
+
+                .sixth {
+                    height: 70px;
+                    width: 250px;
+                    position: absolute;
+                    top: 90px;
+                    left: 50%;
+                    translate: -50% -50%;
+                    background-color: #607d8b;
+                }
+
+                .camera {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #358fb6;
+                    border: #3e3e3e solid 10px;
+                    outline: #cecece solid 10px;
+                    position: absolute;
+                    top: -33px;
+                    border-radius: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                }
+
+                
+                .camera:after {
+                    content:"";
+                    width: 70px;
+                    height: 70px;
+                    outline: #ededed solid 10px;
+                    position: absolute;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 15px;                    top: 50%;
+                    border-radius: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                }
+
+                .button-1 {
+                    width: 35px;
+                    height: 10px;
+                    background-color:#607d8b;
+                    position: absolute;
+                    top: -60px;
+                    right: 100px;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 3px;
+                    border-bottom-left-radius: 3px;
+
+                }
+
+                .button-2 {
+                    background-color: red;
+                    height: 3px;
+                    width: 22px;
+                    position: absolute;
+                    left: 6.5px;
+                    border-radius: 5px;
+                    bottom: 10px;
+                    transition: background-color 0.5s linear;
+                }
+
+                .button-2:hover {
+                    background-color: #4e6570;
+                    cursor: pointer;
+                }
+
+                .camera::before {
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    background-color: #68b8db;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    transition: background-color 0.1s linear;
+                    border-radius: 50%;
+                }
+
+                .first:has(.button-2:active) {
+                    .camera::before {
+                        background-color: white;
+                    }
+                }
+            </style>
+    </head>
+
+    <body>
+       <div class="first">
+        <div class="second">
+            <div class="third">
+                <div class="fifth">
+                    <div class="sixth">
+                        <div class="second-2">
+                            <div class="camera">
+                                <div class="button-1">
+                                    <div class="button-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fourth"></div>
+
+       </div>
+    </body>
+
+</html>
